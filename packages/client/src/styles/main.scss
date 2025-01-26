@@ -1,10 +1,17 @@
 @use 'fonts';
 
 body {
-  background-image: linear-gradient(to right, $app-cell-color 1px, transparent 1px),
-    linear-gradient(to bottom, $app-cell-color 1px, transparent 1px);
+  --bg-color: $default-bg-color;
+  --font-color: $color-black;
+  --font-secondary-color: $secondary-color;
+  --menu-bg-color: $default-bg-color;
+  --cell-color: $app-cell-color;
+
+  background-color: var(--bg-color);
+  background-image: linear-gradient(to right, var(--cell-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--cell-color) 1px, transparent 1px);
   background-size: $app-cell-size $app-cell-size;
-  color: $color-black;
+  color: var(--font-color);
 }
 
 * {
@@ -12,4 +19,12 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+.dark-theme {
+  --bg-color: #282A2E;
+  --font-color: #fff;
+  --menu-bg-color: #444;
+  --cell-color: #555;
+  --font-secondary-color: #bbb;
 }

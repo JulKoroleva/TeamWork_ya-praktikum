@@ -4,7 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 import { usePage } from '@/services/hooks';
 
-import { initPageWithoutData } from '@/routes';
+import { initPage } from '@/routes';
 
 import styles from './Error.module.scss';
 
@@ -14,7 +14,7 @@ export const Error = () => {
   const { code } = useParams<{ code: string }>();
   const navigate = useNavigate();
 
-  usePage({ initPage: initPageWithoutData });
+  usePage({ initPage });
 
   return (
     <div className={styles['error-page']}>

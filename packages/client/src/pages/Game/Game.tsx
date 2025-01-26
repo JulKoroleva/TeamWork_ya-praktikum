@@ -15,7 +15,7 @@ import { addLeaderBoardEntry } from '@/redux/requests';
 import { RootState, TypeDispatch } from '@/redux/store';
 import { getCookie } from '@/services/cookiesHandler';
 import { useIsAuthorized, usePage } from '@/services/hooks';
-import { initPageWithoutData } from '@/routes';
+import { initPage } from '@/routes';
 
 export const Game = () => {
   const navigate = useNavigate();
@@ -77,7 +77,7 @@ export const Game = () => {
     setIsPaused(false);
   };
 
-  usePage({ initPage: initPageWithoutData });
+  usePage({ initPage });
 
   return (
     <>

@@ -27,3 +27,6 @@ export const OAUTH_SIGN_IN_UP = `${MAIN_URL}/oauth/yandex`;
 
 //FORUM
 export const TOPICS_URL = `${SERVER_HOST}/forum`;
+
+//THEME
+export const THEME_URL = `${SERVER_HOST}/theme`;

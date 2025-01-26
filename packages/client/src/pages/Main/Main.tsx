@@ -18,7 +18,7 @@ import { IParticle, IButtonConfig } from './Main.interface';
 import { ROUTES } from '@/constants/routes';
 import { HEADERS } from '@/constants/headers';
 import { COLOR_PALETTE } from './constants/color.constant';
-import { initPageWithoutData } from '@/routes';
+import { initPage } from '@/routes';
 
 import { deleteCookie, getCookie } from '@/services/cookiesHandler';
 import { useIsAuthorized, usePage } from '@/services/hooks';
@@ -152,7 +152,7 @@ export const Main = () => {
     }
   }, [authCookie]);
 
-  usePage({ initPage: initPageWithoutData });
+  usePage({ initPage });
 
   return (
     <div className={styles['main-page']}>

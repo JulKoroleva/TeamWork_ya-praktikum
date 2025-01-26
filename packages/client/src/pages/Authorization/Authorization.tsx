@@ -24,7 +24,7 @@ import {
 } from './AuthorizationPageData';
 import { ROUTES } from '@/constants/routes';
 import { HEADERS } from '@/constants/headers';
-import { initPageWithoutData } from '@/routes';
+import { initPage } from '@/routes';
 
 import { setCustomCookieWithMaxAge } from '@/services/cookiesHandler';
 import { usePage } from '@/services/hooks';
@@ -116,7 +116,7 @@ export const Authorization = () => {
     };
   }, []);
 
-  usePage({ initPage: initPageWithoutData });
+  usePage({ initPage });
 
   return (
     <div className={styles['authorization-page']}>

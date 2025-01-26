@@ -15,5 +15,11 @@ export type {
   IRegistrationSlice,
   IForumSlice,
 } from './pagesSlices';
-export { userSlice, clearUserState, clearChangeUserState } from './globalSlices';
-export type { IUserSlice, IUserInfo, IUserPassword } from './globalSlices';
+export {
+  userSlice,
+  clearUserState,
+  clearChangeUserState,
+  themeSlice,
+  clearThemeState,
+} from './globalSlices';
+export type { IUserSlice, IUserInfo, IUserPassword, IThemeSlice } from './globalSlices';

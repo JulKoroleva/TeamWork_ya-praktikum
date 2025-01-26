@@ -14,14 +14,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: $default-bg-color;
+    background-color: var(--menu-bg-color);
     padding: 2rem;
     box-shadow: $box-shadow-modal;
     border-radius: 8px;
 
     &_description {
       font-size: 1rem;
-      color: $secondary-color;
+      color: var(--font-secondary-color);
       margin-top: 10px;
       max-width: 400px;
     }

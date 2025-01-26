@@ -33,7 +33,7 @@ import { useIsAuthorized, usePage } from '@/services/hooks';
 import { getCookie } from '@/services/cookiesHandler';
 
 import { ROUTES } from '@/constants/routes';
-import { initPageWithoutData } from '@/routes';
+import { initPage } from '@/routes';
 
 import styles from './profile.module.scss';
 
@@ -140,7 +140,7 @@ export const Profile = () => {
     }
   }, [userStatus, userError]);
 
-  usePage({ initPage: initPageWithoutData });
+  usePage({ initPage });
 
   const settings = (
     <>

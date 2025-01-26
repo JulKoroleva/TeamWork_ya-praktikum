@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { IYaSendSuggestToken } from './OAuthTokenPage.interface';
 import { ROUTES } from '@/constants/routes';
-import { initPageWithoutData } from '@/routes';
+import { initPage } from '@/routes';
 import { usePage } from '@/services/hooks';
 
 declare global {
@@ -31,7 +31,7 @@ function loadScript() {
 
 // Пустая страница, необходима для реализации YaOAuth, она появляется на долю секунд в процессе редиректов
 export function OAuthTokenPage() {
-  usePage({ initPage: initPageWithoutData });
+  usePage({ initPage });
   useEffect(() => {
     function sendToken() {
       window.YaSendSuggestToken(`${window.location.origin}${ROUTES.authorization()}`, {

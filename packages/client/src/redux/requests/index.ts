@@ -11,4 +11,4 @@ export {
   getTopicById,
   addLeaderBoardEntry,
 } from './pagesRequests';
-export { getUserInfoRequest } from './globalRequests';
+export { getUserInfoRequest, getTheme } from './globalRequests';

@@ -14,7 +14,7 @@ import {
 import { TopicList, Pagination, TPaginationOptions, TTopic } from './components';
 
 import { TypeDispatch } from '@/redux/store';
-import { createTopic, fetchForum } from '@/redux/requests';
+import { createTopic, fetchForum, getTheme } from '@/redux/requests';
 import {
   selectCreateTopicError,
   selectCreateTopicStatus,
@@ -177,7 +177,10 @@ export const Forum = () => {
 };
 
 export const initForumPage = ({ dispatch, state }: PageInitArgs) => {
-  const queue: Array<Promise<unknown>> = [dispatch(fetchForum({}))];
+  const queue: Array<Promise<unknown>> = [
+    dispatch(getTheme({ userId: 123 })),
+    dispatch(fetchForum({})),
+  ];
   if (!selectTopicList(state)) {
     queue.push(dispatch(fetchForum({})));
   }

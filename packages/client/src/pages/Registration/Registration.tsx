@@ -22,7 +22,7 @@ import {
 } from './RegistrationPageData';
 import { ROUTES } from '@/constants/routes';
 import { HEADERS } from '@/constants/headers';
-import { initPageWithoutData } from '@/routes';
+import { initPage } from '@/routes';
 
 import { usePage } from '@/services/hooks';
 
@@ -93,7 +93,7 @@ export const Registration = () => {
     }
   }, [registrationStatus, registrationError]);
 
-  usePage({ initPage: initPageWithoutData });
+  usePage({ initPage });
 
   return (
     <div className={styles['registration-page']}>

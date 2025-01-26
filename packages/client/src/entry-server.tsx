@@ -2,6 +2,7 @@ import React from 'react';
 import { matchRoutes } from 'react-router-dom';
 import ReactDOM from 'react-dom/server';
 import { Provider } from 'react-redux';
+import { ThemeProvider } from '@/components';
 import { configureStore } from '@reduxjs/toolkit';
 import { Request as ExpressRequest } from 'express';
 import {
@@ -65,7 +66,9 @@ export const render = async (req: ExpressRequest) => {
   return {
     html: ReactDOM.renderToString(
       <Provider store={store}>
-        <StaticRouterProvider router={router} context={context} />
+        <ThemeProvider>
+          <StaticRouterProvider router={router} context={context} />
+        </ThemeProvider>
       </Provider>,
     ),
     initialState: store.getState(),

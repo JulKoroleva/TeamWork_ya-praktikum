@@ -5,7 +5,7 @@ import { GET_USER_INFO_URL, RESOURCES_URL } from '@/constants/apiUrls';
 import { extractTextFromImage } from '@/utils/colorFileUtils';
 import { urlToFile } from '@/utils/urlToFile';
 
-import { IUserInfo } from '@/redux/slices/globalSlices/userSlices/userSlice.interface';
+import { IUserInfo } from '@/redux/slices';
 
 async function processUserAvatarSync(avatar: string): Promise<string> {
   try {

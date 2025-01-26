@@ -16,4 +16,4 @@ export {
   selectGetTopicByIdError,
 } from './pagesSelectors';
 
-export { selectUser, selectUserError, selectUserStatus } from './globalSelectors';
+export { selectUser, selectUserError, selectUserStatus, selectTheme } from './globalSelectors';

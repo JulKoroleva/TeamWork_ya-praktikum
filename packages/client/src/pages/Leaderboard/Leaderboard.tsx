@@ -11,7 +11,7 @@ import { fetchLeaderBoard } from '@/redux/requests/pagesRequests/leaderBoardRequ
 import { RootState, TypeDispatch } from '@/redux/store';
 import { getCookie } from '@/services/cookiesHandler';
 import { usePage } from '@/services/hooks';
-import { initPageWithoutData } from '@/routes';
+import { initPage } from '@/routes';
 
 export const Leaderboard = () => {
   const navigate = useNavigate();
@@ -30,7 +30,7 @@ export const Leaderboard = () => {
     }
   }, [authCookie]);
 
-  usePage({ initPage: initPageWithoutData });
+  usePage({ initPage });
 
   if (loading === 'loading')
     return (
